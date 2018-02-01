@@ -36,6 +36,7 @@ defmodule MiotwoWeb.Endpoint do
     key: "_miotwo_key",
     signing_salt: "No3X4OKh"
 
+  plug CORSPlug
   plug MiotwoWeb.Router
 
   @doc """
