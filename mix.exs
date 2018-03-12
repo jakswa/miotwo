@@ -19,7 +19,7 @@ defmodule Miotwo.Mixfile do
   def application do
     [
       mod: {Miotwo.Application, []},
-      extra_applications: [:logger, :runtime_tools, :httpoison, :timex]
+      extra_applications: [:logger, :runtime_tools, :httpoison, :timex, :appsignal]
     ]
   end
 
@@ -38,6 +38,7 @@ defmodule Miotwo.Mixfile do
       {:cowboy, "~> 1.0"},
       {:httpoison, "~> 0.13"},
       {:cors_plug, "~> 1.2"},
+      {:appsignal, "~> 1.0"},
       {:timex, "~> 3.1"}
     ]
   end

@@ -8,6 +8,7 @@ use Mix.Config
 # Configures the endpoint
 config :miotwo, MiotwoWeb.Endpoint,
   url: [host: "localhost"],
+  instrumenters: [Appsignal.Phoenix.Instrumenter],
   secret_key_base: "N5lt0cU5vlpOo39PkMErjr02rRJPg5y1sMjA2iBj4KHeo7k4mtfJ86JtLnPET+hZ",
   render_errors: [view: MiotwoWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: Miotwo.PubSub,
