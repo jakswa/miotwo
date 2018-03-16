@@ -13,3 +13,7 @@ To get a working Marta Train response:
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000/api/trains`](http://localhost:4000/api/trains) from your browser.
+
+## sponsors
+
+[![image](https://user-images.githubusercontent.com/137793/37504511-343776e2-28b5-11e8-9346-77f0adda99c9.png)](https://appsignal.com/)
