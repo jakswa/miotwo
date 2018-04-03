@@ -1,6 +1,5 @@
 defmodule MiotwoWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :miotwo
-  use Appsignal.Phoenix
 
   socket "/socket", MiotwoWeb.UserSocket
 

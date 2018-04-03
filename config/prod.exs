@@ -15,11 +15,9 @@ use Mix.Config
 # which you typically run after static files are built.
 config :miotwo, MiotwoWeb.Endpoint,
   load_from_system_env: true,
-  url: [
-    host: System.get_env("HEROKU_APP_NAME") <> ".herokuapp.com/",
-    port: 80
-  ],
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  check_origin: false,
+  root: ".",
+  server: true
 # not sure what this is, removed tho  -jake
 # cache_static_manifest: "priv/static/cache_manifest.json",
 

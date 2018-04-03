@@ -1,6 +1,5 @@
 defmodule MiotwoWeb.TrainController do
   use MiotwoWeb, :controller
-  use Appsignal.Instrumentation.Decorators
   alias Miotwo.TrainCache
 
   # Proxy the raw response from MARTA,
@@ -17,7 +16,6 @@ defmodule MiotwoWeb.TrainController do
   end
 
 
-  @decorate transaction_event("train_json")
   defp train_json do
     TrainCache.train_json
   end
