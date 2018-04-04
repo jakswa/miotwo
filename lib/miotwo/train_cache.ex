@@ -23,15 +23,15 @@ defmodule Miotwo.TrainCache do
     {:reply, elem(expires, 1), expires}
   end
 
-  defp check_expires(diff, {_time, _json}) when diff > 0 do
-    {Timex.shift(Timex.now, seconds: 10), HTTPoison.get!(train_url()) }
+  defp check_expires(diff, {_time, _resp}) when diff > 0 do
+    {Timex.shift(Timex.now, seconds: 10), HTTPoison.get(train_url()) }
   end
 
-  defp check_expires(_diff, {time, json}) do
-   {time, json}
+  defp check_expires(_diff, {time, resp}) do
+   {time, resp}
   end
 
   defp train_url do
-    @vars.url <> System.get_env("MARTA_TRAIN_API_KEY")
+    @vars.url <> (System.get_env("MARTA_TRAIN_API_KEY") || "")
   end
 end
