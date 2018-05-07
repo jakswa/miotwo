@@ -21,6 +21,11 @@ config :logger, :console,
 config :miotwo,
   marta_train_api_key: "${MARTA_TRAIN_API_KEY}"
 
+config :rollbax,
+  enable_crash_reports: true,
+  access_token: "${ROLLBAR_ACCESS_TOKEN}",
+  environment: "production"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

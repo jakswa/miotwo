@@ -10,4 +10,8 @@ defmodule MiotwoWeb.Router do
 
     get "/trains", TrainController, :index
   end
+
+  defp handle_errors(conn, %{kind: kind, reason: reason, stack: stacktrace}) do
+    Rollbax.report(kind, reason, stacktrace)
+  end
 end

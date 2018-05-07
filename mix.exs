@@ -40,7 +40,8 @@ defmodule Miotwo.Mixfile do
       {:cors_plug, "~> 1.2"},
       {:distillery, "~> 1.5"},
       {:exvcr, "~> 0.10", only: :test},
-      {:timex, "~> 3.1"}
+      {:timex, "~> 3.1"},
+      {:rollbax, ">= 0.0.0"}
     ]
   end
 end
