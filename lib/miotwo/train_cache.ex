@@ -7,11 +7,15 @@ defmodule Miotwo.TrainCache do
     GenServer.call(:train_cache, :train_json)
   end
 
+  # already expired when created, so HTTP gets triggered
   def start_link do
-    GenServer.start_link(__MODULE__, Timex.now, name: :train_cache) 
+    start_link(Timex.shift(Timex.now, minutes: -1))
   end
 
-  # already expired when created, so HTTP gets triggered
+  def start_link(time) do
+    GenServer.start_link(__MODULE__, time, name: :train_cache) 
+  end
+
   def init(expires) do 
     {:ok, {expires, nil}}
   end

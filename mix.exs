@@ -39,6 +39,7 @@ defmodule Miotwo.Mixfile do
       {:httpoison, "~> 0.13"},
       {:cors_plug, "~> 1.2"},
       {:distillery, "~> 1.5"},
+      {:exvcr, "~> 0.10", only: :test},
       {:timex, "~> 3.1"}
     ]
   end
