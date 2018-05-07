@@ -21,4 +21,3 @@ erl_crash.dump
 !.elasticbeanstalk/*.global.yml
 # Google Cloud App files
 app.yaml
-/rel

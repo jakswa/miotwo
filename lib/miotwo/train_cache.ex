@@ -36,6 +36,6 @@ defmodule Miotwo.TrainCache do
   end
 
   defp train_url do
-    @vars.url <> (System.get_env("MARTA_TRAIN_API_KEY") || "")
+    @vars.url <> (Application.get_env(:miotwo, :marta_train_api_key) || "")
   end
 end

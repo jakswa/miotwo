@@ -17,6 +17,7 @@ config :miotwo, MiotwoWeb.Endpoint,
   load_from_system_env: true,
   check_origin: false,
   root: ".",
+  secret_key_base: "${SECRET_KEY_BASE}",
   server: true
 # not sure what this is, removed tho  -jake
 # cache_static_manifest: "priv/static/cache_manifest.json",
