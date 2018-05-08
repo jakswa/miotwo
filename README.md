@@ -1,4 +1,4 @@
-# Miotwo
+# Miotwo [![build status](https://travis-ci.org/jakswa/miotwo.svg?branch=master)](https://travis-ci.org/jakswa/miotwo)
 
 A rewrite of jakswa/marta_api in Phoenix/Elixir. Strangely enough, you have to get far enough into Elixir to where you understand OTP a little bit, before you can write a "globally shared 10s request cache," as implemented in jakswa/marta_api.
 
