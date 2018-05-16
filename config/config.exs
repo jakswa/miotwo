@@ -5,6 +5,8 @@
 # is restricted to this project.
 use Mix.Config
 
+import_config "scout_apm.exs"
+
 # Configures the endpoint
 config :miotwo, MiotwoWeb.Endpoint,
   url: [host: "localhost"],

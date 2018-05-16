@@ -20,6 +20,7 @@ defmodule MiotwoWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: MiotwoWeb
+      use ScoutApm.Instrumentation
       import Plug.Conn
       import MiotwoWeb.Router.Helpers
       import MiotwoWeb.Gettext
