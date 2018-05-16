@@ -16,4 +16,4 @@ Now you can visit [`localhost:4000/api/trains`](http://localhost:4000/api/trains
 
 ## sponsors
 
-[![scout_dog](https://user-images.githubusercontent.com/137793/40133142-e31ee672-590c-11e8-817e-b5fb6b6a18d4.png)](https://scoutapp.com/)
+![scout_dog](https://apm.scoutapp.com/assets/public/orange_logo-8fb7805c7eb95e306efe263dbe27994bfcf3610e0bb5a879f626448889e00515.png)
