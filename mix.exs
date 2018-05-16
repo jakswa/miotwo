@@ -19,7 +19,7 @@ defmodule Miotwo.Mixfile do
   def application do
     [
       mod: {Miotwo.Application, []},
-      extra_applications: [:logger, :runtime_tools, :httpoison, :timex]
+      extra_applications: [:logger, :runtime_tools, :httpoison, :timex, :scout_apm]
     ]
   end
 
@@ -41,7 +41,8 @@ defmodule Miotwo.Mixfile do
       {:distillery, "~> 1.5"},
       {:exvcr, "~> 0.10", only: :test},
       {:timex, "~> 3.1"},
-      {:rollbax, ">= 0.0.0"}
+      {:rollbax, ">= 0.0.0"},
+      {:scout_apm, "~> 0.0"}
     ]
   end
 end

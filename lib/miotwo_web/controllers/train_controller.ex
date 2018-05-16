@@ -1,5 +1,6 @@
 defmodule MiotwoWeb.TrainController do
   use MiotwoWeb, :controller
+  import ScoutApm.Tracing
   alias Miotwo.TrainCache
 
   # Proxy the raw response from MARTA,
@@ -25,6 +26,8 @@ defmodule MiotwoWeb.TrainController do
   end
 
   defp train_json do
-    TrainCache.train_json
+    timing("TrainCache", "train_json") do
+      TrainCache.train_json
+    end
   end
 end
